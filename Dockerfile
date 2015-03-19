@@ -7,10 +7,7 @@ RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 CMD ["/sbin/my_init"]
 ENV DEBIAN_FRONTEND noninteractive
 
-# Update software list
-RUN apt-get update
-
-# Install php-nginx & clear cache
+# Update software list, install php-nginx & clear cache
 RUN apt-get update && \
     apt-get install -y --force-yes nginx \
     php5-fpm php5-cli php5-mysql php5-mcrypt \
