@@ -43,7 +43,7 @@ RUN chmod +x                                                            /etc/ser
 # Add nginx
 VOLUME ["/var/www", "/etc/nginx/sites-available", "/etc/nginx/sites-enabled"]
 
-# Entrypoint
+# Workdir
 WORKDIR /var/www
 
 EXPOSE 80
